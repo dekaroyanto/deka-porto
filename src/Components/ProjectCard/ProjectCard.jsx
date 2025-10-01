@@ -1,6 +1,12 @@
 import React, { useContext } from "react";
 import { themeContext } from "../../Context";
 import "./ProjectCard.css";
+import wuling from "../../img/wuling.png";
+import scentnice from "../../img/scentnice.png";
+import affiliator from "../../img/afiliator.png";
+import presensi from "../../img/presensi.png";
+import talent from "../../img/talent.png";
+import transmart from "../../img/tri.png";
 
 const ProjectCard = () => {
   const theme = useContext(themeContext);
@@ -9,62 +15,57 @@ const ProjectCard = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Website",
+      title: "Business Consultant Wuling",
       description:
-        "Website toko online dengan fitur lengkap seperti keranjang belanja, pembayaran, dan manajemen produk.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-      demoLink: "#",
+        "This website is Wuling Bali Business Consultant’s official platform, providing car sales info, latest offers, credit simulators, and WhatsApp consultation.",
+      image: wuling,
+      demoLink: "https://ydewmobilbarubali.my.id/",
       githubLink: "#",
     },
+
     {
       id: 2,
-      title: "Task Management App",
+      title: "ScentNice E-commerce",
       description:
-        "Aplikasi manajemen tugas dengan drag & drop, notifikasi, dan kolaborasi tim.",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1469&q=80",
-      demoLink: "#",
+        "This is ScentNice’s e-commerce platform, allowing users to browse products, view details, add to cart, and checkout easily.",
+      image: scentnice,
+      demoLink: "https://perfume.scentnice.co.id/",
       githubLink: "#",
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "PresenTrack",
       description:
-        "Dashboard cuaca dengan prediksi 7 hari, peta interaktif, dan notifikasi cuaca ekstrem.",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1365&q=80",
+        "This app records employee attendance and calculates salaries automatically based on days present, including employee data input and daily tracking. Ideal for small businesses.",
+      image: presensi,
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/dekaroyanto/nafast-media",
     },
     {
       id: 4,
-      title: "Social Media Platform",
+      title: "Talent Recap",
       description:
-        "Platform media sosial dengan fitur posting, komentar, like, dan chat real-time.",
-      image:
-        "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80",
+        "This app records talent sessions and calculates fees automatically, with features like data input, session types, and daily summaries for easy monitoring.",
+      image: talent,
       demoLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/dekaroyanto/talent-nafast",
     },
     {
       id: 5,
-      title: "Fitness Tracker",
+      title: "Transmart Umroh Rewards",
       description:
-        "Aplikasi pelacak kebugaran dengan grafik progres, rencana latihan, dan integrasi wearable.",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-      demoLink: "#",
+        "Transmart Umroh Rewards is a loyalty app where customers earn points from purchases and can exchange them for lottery vouchers to win a free Umrah trip.",
+      image: transmart,
+      demoLink: "https://hadiah.transmart.co.id/",
       githubLink: "#",
     },
     {
       id: 6,
-      title: "Recipe Finder",
+      title: "ScentNice Affiliate",
       description:
-        "Aplikasi pencari resep dengan filter bahan, video tutorial, dan sistem rating.",
-      image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
-      demoLink: "#",
+        "This landing page helps users register for the ScentNice perfume affiliate program, offering a clean, modern, and responsive design.",
+      image: affiliator,
+      demoLink: "https://scentnice.co.id/affiliate",
       githubLink: "#",
     },
   ];
@@ -163,22 +164,26 @@ const ProjectCard = () => {
               </p>
 
               <div className="card-buttons">
-                <a
-                  href={project.demoLink}
-                  className="card-button card-button-demo"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.githubLink}
-                  className="card-button card-button-github"
-                  style={{
-                    background: darkMode ? "#333" : "var(--black)",
-                    color: "white",
-                  }}
-                >
-                  GitHub
-                </a>
+                {project.demoLink && project.demoLink !== "#" && (
+                  <a
+                    href={project.demoLink}
+                    className="card-button card-button-demo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo
+                  </a>
+                )}
+                {project.githubLink && project.githubLink !== "#" && (
+                  <a
+                    href={project.githubLink}
+                    className="card-button card-button-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                )}
               </div>
             </div>
           </div>
