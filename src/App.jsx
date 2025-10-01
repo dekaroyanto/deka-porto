@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar/Navbar.jsx";
+import Navbar from "./Components/Navbar/Navbar.jsx";
 import Intro from "./Components/Intro/Intro.jsx";
 import Services from "./Components/Services/Services.jsx";
 import Experience from "./Components/Experience/Experience.jsx";
