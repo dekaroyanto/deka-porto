@@ -1,4 +1,3 @@
-// src/Components/ProjectCard/ProjectCard.jsx
 import React, { useContext } from "react";
 import { themeContext } from "../../Context";
 import "./ProjectCard.css";
@@ -75,11 +74,46 @@ const ProjectCard = () => {
       className="project-section"
       id="project"
       style={{
+        position: "relative",
         background: darkMode ? "black" : "",
         color: darkMode ? "white" : "",
+        padding: "48px 0",
       }}
     >
-      <div className="project-header">
+      {/* Blur pertama */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-50px",
+          left: "-50px",
+          width: "300px",
+          height: "300px",
+          backgroundColor: "#ABF1FF94",
+          filter: "blur(100px)",
+          zIndex: 0,
+          borderRadius: "50%",
+        }}
+      ></div>
+
+      {/* Blur kedua */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-80px",
+          right: "-60px",
+          width: "400px",
+          height: "400px",
+          backgroundColor: "var(--purple)",
+          filter: "blur(150px)",
+          zIndex: 0,
+          borderRadius: "50%",
+        }}
+      ></div>
+
+      <div
+        className="project-header"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         <span style={{ color: darkMode ? "white" : "" }}>My Projects</span>
         <span>Portfolio</span>
         <span style={{ color: darkMode ? "white" : "" }}>
@@ -89,7 +123,10 @@ const ProjectCard = () => {
         </span>
       </div>
 
-      <div className="projects-grid">
+      <div
+        className="projects-grid"
+        style={{ position: "relative", zIndex: 1 }}
+      >
         {projects.map((project) => (
           <div
             key={project.id}

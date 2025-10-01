@@ -1,3 +1,4 @@
+// src/Components/Experience/Experience.jsx
 import React, { useContext, useMemo } from "react";
 import {
   VerticalTimeline,
@@ -5,8 +6,9 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { themeContext } from "../../Context";
+import "./Experience.css";
 
-import { FaRocket, FaBriefcase, FaCode, FaCrown } from "react-icons/fa";
+import { FaRocket, FaBriefcase, FaCode } from "react-icons/fa";
 
 const Experience = ({ items }) => {
   const theme = useContext(themeContext);
@@ -58,7 +60,40 @@ const Experience = ({ items }) => {
   );
 
   return (
-    <div className="experience" id="experience" style={{ padding: "48px 0" }}>
+    <div
+      className="experience"
+      id="experience"
+      style={{ position: "relative", padding: "48px 0" }}
+    >
+      {/* Blur background */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-50px",
+          left: "-50px",
+          width: "300px",
+          height: "300px",
+          backgroundColor: "#ABF1FF94",
+          filter: "blur(100px)",
+          zIndex: 0,
+          borderRadius: "50%",
+        }}
+      ></div>
+
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-80px",
+          right: "-60px",
+          width: "400px",
+          height: "400px",
+          backgroundColor: "var(--purple)",
+          filter: "blur(150px)",
+          zIndex: 0,
+          borderRadius: "50%",
+        }}
+      ></div>
+
       {/* Judul Section */}
       <h2
         style={{
@@ -67,6 +102,8 @@ const Experience = ({ items }) => {
           fontWeight: "bold",
           marginBottom: "32px",
           color: darkMode ? "#e5e7eb" : "#111827",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         Experience
@@ -82,6 +119,8 @@ const Experience = ({ items }) => {
               color: styles.cardText,
               boxShadow: styles.shadow,
               border: `1px solid ${darkMode ? "#1f2937" : "#e5e7eb"}`,
+              position: "relative",
+              zIndex: 1,
             }}
             contentArrowStyle={{
               borderRight: `7px solid ${styles.cardBg}`,
