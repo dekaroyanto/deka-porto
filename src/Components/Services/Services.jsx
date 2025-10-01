@@ -60,7 +60,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Developer"}
-            detail={"Html, Css, Js, React, Express"}
+            detail={"HTML, CSS, JavaScipt, ReactJs, Express"}
           />
         </motion.div>
         {/* 3rd */}
