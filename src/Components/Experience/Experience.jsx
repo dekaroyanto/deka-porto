@@ -6,7 +6,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { themeContext } from "../../Context";
-import "./Experience.css";
 
 import { FaRocket, FaBriefcase, FaCode } from "react-icons/fa";
 
@@ -65,35 +64,6 @@ const Experience = ({ items }) => {
       id="experience"
       style={{ position: "relative", padding: "48px 0" }}
     >
-      {/* Blur background */}
-      <div
-        style={{
-          position: "absolute",
-          top: "-50px",
-          left: "-50px",
-          width: "300px",
-          height: "300px",
-          backgroundColor: "#ABF1FF94",
-          filter: "blur(100px)",
-          zIndex: 0,
-          borderRadius: "50%",
-        }}
-      ></div>
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "-80px",
-          right: "-60px",
-          width: "400px",
-          height: "400px",
-          backgroundColor: "var(--purple)",
-          filter: "blur(150px)",
-          zIndex: 0,
-          borderRadius: "50%",
-        }}
-      ></div>
-
       {/* Judul Section */}
       <h2
         style={{

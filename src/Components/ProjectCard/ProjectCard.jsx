@@ -81,36 +81,6 @@ const ProjectCard = () => {
         padding: "48px 0",
       }}
     >
-      {/* Blur pertama */}
-      <div
-        style={{
-          position: "absolute",
-          top: "-50px",
-          left: "-50px",
-          width: "300px",
-          height: "300px",
-          backgroundColor: "#ABF1FF94",
-          filter: "blur(100px)",
-          zIndex: 0,
-          borderRadius: "50%",
-        }}
-      ></div>
-
-      {/* Blur kedua */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: "-80px",
-          right: "-60px",
-          width: "400px",
-          height: "400px",
-          backgroundColor: "var(--purple)",
-          filter: "blur(150px)",
-          zIndex: 0,
-          borderRadius: "50%",
-        }}
-      ></div>
-
       <div
         className="project-header"
         style={{ position: "relative", zIndex: 1 }}
