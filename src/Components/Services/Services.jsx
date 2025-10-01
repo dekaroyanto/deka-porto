@@ -48,7 +48,7 @@ const Services = () => {
           <Card
             emoji={HeartEmoji}
             heading={"Marketplace Administrator"}
-            detail={"Shopee, Tiktok, Tokopedia, Lazada etc"}
+            detail={"Shopee, Tiktok, Tokopedia, Lazada etc."}
           />
         </motion.div>
         {/* second card */}
@@ -72,7 +72,7 @@ const Services = () => {
           <Card
             emoji={Humble}
             heading={"Advertiser"}
-            detail={"Meta Ads, Tiktok Ads, Shopee Ads, etc"}
+            detail={"Meta Ads, Tiktok Ads, Shopee Ads, etc."}
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>
