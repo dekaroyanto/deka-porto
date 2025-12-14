@@ -7,6 +7,7 @@ import affiliator from "../../img/afiliator.png";
 import presensi from "../../img/presensi.png";
 import talent from "../../img/talent.png";
 import transmart from "../../img/tri.png";
+import cbs from "../../img/cbs.png";
 
 const ProjectCard = () => {
   const theme = useContext(themeContext);
@@ -15,6 +16,15 @@ const ProjectCard = () => {
   const projects = [
     {
       id: 1,
+      title: "Promo & Benefit Company Website",
+      description:
+        "This website is the official company platform showcasing product promotions, exclusive discounts, bundled offers, and customer benefits. Visitors can explore the latest deals, learn about loyalty rewards, and access easy purchase options with direct consultation support.",
+      image: cbs,
+      demoLink: "https://columbus-majalengka.vercel.app/",
+      githubLink: "#",
+    },
+    {
+      id: 2,
       title: "Business Consultant Wuling",
       description:
         "This website is Wuling Bali Business Consultant’s official platform, providing car sales info, latest offers, credit simulators, and WhatsApp consultation.",
@@ -24,7 +34,7 @@ const ProjectCard = () => {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "ScentNice E-commerce",
       description:
         "This is ScentNice’s e-commerce platform, allowing users to browse products, view details, add to cart, and checkout easily.",
@@ -33,7 +43,7 @@ const ProjectCard = () => {
       githubLink: "#",
     },
     {
-      id: 3,
+      id: 4,
       title: "PresenTrack",
       description:
         "This app records employee attendance and calculates salaries automatically based on days present, including employee data input and daily tracking. Ideal for small businesses.",
@@ -42,7 +52,7 @@ const ProjectCard = () => {
       githubLink: "https://github.com/dekaroyanto/nafast-media",
     },
     {
-      id: 4,
+      id: 5,
       title: "Talent Recap",
       description:
         "This app records talent sessions and calculates fees automatically, with features like data input, session types, and daily summaries for easy monitoring.",
@@ -51,7 +61,7 @@ const ProjectCard = () => {
       githubLink: "https://github.com/dekaroyanto/talent-nafast",
     },
     {
-      id: 5,
+      id: 6,
       title: "Transmart Umroh Rewards",
       description:
         "Transmart Umroh Rewards is a loyalty app where customers earn points from purchases and can exchange them for lottery vouchers to win a free Umrah trip.",
@@ -60,7 +70,7 @@ const ProjectCard = () => {
       githubLink: "#",
     },
     {
-      id: 6,
+      id: 7,
       title: "ScentNice Affiliate",
       description:
         "This landing page helps users register for the ScentNice perfume affiliate program, offering a clean, modern, and responsive design.",

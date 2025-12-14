@@ -41,6 +41,15 @@ const Experience = ({ items }) => {
       icon: <FaRocket />,
       color: "#f59e0b",
     },
+    {
+      date: "October 2025 – Now",
+      title: "PT Columbus",
+      subtitle: "Accountant",
+      description:
+        "Record daily financial transactions, prepare journals, help record stock and invoices",
+      icon: <FaBriefcase />,
+      color: "#10b981",
+    },
   ];
 
   const data = items?.length ? items : defaultItems;
